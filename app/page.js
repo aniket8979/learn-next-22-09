@@ -1,9 +1,70 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+
+
+
+
+import NewForm from "./dashboard/myform/newform";
+import * as aniket from "./globals.css";
+import LoginComp from "./loginComponent/LoginComp";
+
+
+export function HomePage() {
+
+
+
+
+  return (
+    <div>
+      <h1>HomePage component</h1>
+      {/* 
+            <div className={aniket.homePageDemo}>
+                <h1>Home Page</h1>
+                <p>Welcome to the home page!</p>
+            </div>
+
+            <br>
+            </br>
+
+
+            <div>
+                <NewForm />
+            </div> */}
+
+      <div>
+        <LoginComp />
+        <h4>input box created inside LoginComp was imported to HomePage component to demonstrate use of components to create pages </h4>
+
+      </div>
+    </div>
+
+  )
+}
+
+
+
 export default function Home() {
   return (
+
+
+
+
+
     <div className={styles.page}>
+
+
+      <h1></h1>
+      <HomePage />
+      <p>Home Page component imported inside main page.js </p>
+      <br></br>
+
+      <br></br>
+      <p>below this is styling of defalt page.js this can be traced inside from /app/page.js</p>
+      <br></br>
+
+
+
       <main className={styles.main}>
         <Image
           className={styles.logo}
